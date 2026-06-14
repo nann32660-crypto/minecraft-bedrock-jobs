@@ -1,0 +1,19 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "마크 베드락 직업 시스템 - 검사, 궁수, 도적, 로봇, 어둠의 파괴자, 닌자, 탱커",
+    "name": "Minecraft Bedrock Jobs",
+    "version": [1, 0, 0],
+    "uuid": "12345678-1234-1234-1234-123456789012"
+  },
+  "modules": [
+    {
+      "description": "스크립트 API 모듈",
+      "type": "script",
+      "uuid": "87654321-4321-4321-4321-210987654321",
+      "version": [1, 0, 0],
+      "language": "javascript",
+      "entry": "scripts/main.js"
+    }
+  ]
+}
