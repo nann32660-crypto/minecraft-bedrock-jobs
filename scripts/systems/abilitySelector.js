@@ -28,24 +28,21 @@ export class AbilitySelector {
    */
   static changeAbility(player, jobName) {
     const maxAbilities = this.ABILITY_COUNTS[jobName];
-    
-    // 능력이 1개 이하면 변경 불가
+
     if (maxAbilities <= 1) {
       player.sendMessage("§c능력이 1개뿐이라 변경할 수 없습니다.");
       return;
     }
 
-    // 현재 선택된 능력
     let currentLevel = PlayerData.getSelectedAbility(player, jobName);
-    
-    // 다음 능력으로 변경
+
     let nextLevel = currentLevel + 1;
     if (nextLevel > maxAbilities) {
       nextLevel = 1;
     }
 
     PlayerData.setSelectedAbility(player, jobName, nextLevel);
-    
+
     const jobNames = {
       swordsman: "검사",
       archer: "궁수",
@@ -60,7 +57,7 @@ export class AbilitySelector {
       dragonWarrior: "용의 전사"
     };
 
-    player.sendMessage(`§6능력 변경: ${jobNames[jobName]} 능력 ${nextLevel}번으로 변경됨!");
+    player.sendMessage(`§6능력 변경: ${jobNames[jobName]} 능력 ${nextLevel}번으로 변경됨!`);
     SoundEffects.readySound(player.dimension, player.location);
   }
 
